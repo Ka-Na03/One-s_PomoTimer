@@ -100,7 +100,7 @@ One's PomoTimerの最終目的は、ポモドーロ法を利用して効率的�
 
 以下は8/14日現在の状況です、がんばります。
 
-<iframe width="560" height="315" src="https://youtu.be/4ENh4iBtRog" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" loading="lazy" allowfullscreen></iframe>
+![8/14のスクリーンショット](https://github.com/Ka-Na03/One-s_PomoTimer/assets/130237347/1667bf47-ca25-491d-9225-832ce70f0f60)
 
 ## 仕様技術
 - Ruby 3.0.6
