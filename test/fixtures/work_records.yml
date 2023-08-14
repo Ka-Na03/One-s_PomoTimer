@@ -1,0 +1,15 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  user_id: 1
+  work_date_time: 2023-08-08 17:55:28
+  total_work_time: 1
+  break_time: 1
+  pomodoro_count: 1
+
+two:
+  user_id: 1
+  work_date_time: 2023-08-08 17:55:28
+  total_work_time: 1
+  break_time: 1
+  pomodoro_count: 1

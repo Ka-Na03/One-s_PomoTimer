@@ -1,0 +1,2 @@
+class AlarmSetting < ApplicationRecord
+end
