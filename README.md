@@ -98,9 +98,10 @@ One's PomoTimerの最終目的は、ポモドーロ法を利用して効率的�
 
 作業時間、小休憩時間、大休憩時間、ポモドーロ数（大休憩に入るタイミング）を設定する項目があり、その設定でルーチンするタイマーになってます。  
 
-以下は8/14日現在の状況です、がんばります。
+以下は8/17日現在の状況です、がんばります。
 
-<iframe width="560" height="315" src="https://youtu.be/4ENh4iBtRog" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" loading="lazy" allowfullscreen></iframe>
+![8/17のスクリーンショット](https://github.com/Ka-Na03/One-s_PomoTimer/assets/130237347/2fc927b8-96ab-4684-988b-5f31936ac4fa)
+
 
 ## 仕様技術
 - Ruby 3.0.6
