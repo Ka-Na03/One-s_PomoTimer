@@ -1,18 +1,20 @@
-<h1>Pomodoro Timer</h1>
+
+<h1>One's PomoTimer</h1>
 
 <div data-controller="timer">
   <div data-timer-target="display" class="timer-display">25:00</div>
 
-  <button data-action="click->timer#start" data-timer-target="startButton">START</button>
-  <button data-action="click->timer#stop" data-timer-target="stopButton" disabled>STOP</button>
-  <button data-action="click->timer#reset" data-timer-target="resetButton">RESET</button>
+  <button data-action="click->timer#start" data-timer-target="startButton" class="start-button">START</button>
 
-  <!-- 各種設定ボタン -->
-  <div>
-    <label>作業時間: <input type="number" data-action="change->timer#updateStudyTime" value="25"></label>
-    <label>小休憩: <input type="number" data-action="change->timer#updateShortBreakTime" value="5"></label>
-    <label>大休憩: <input type="number" data-action="change->timer#updateLongBreakTime" value="15"></label>
-    <label>ポモドーロセット数: <input type="number" data-action="change->timer#updateSetCountBeforeLongBreak" value="4"></label>
+  <div class="button-group">
+    <button data-action="click->timer#stop" data-timer-target="stopButton" disabled>STOP</button>
+    <button data-action="click->timer#reset" data-timer-target="resetButton">RESET</button>
   </div>
-  <!-- 設定変更後には、JavaScriptでタイマー表示を更新する必要があります。 -->
+
+  <div class="input-group">
+    <label><span>作業時間 </span><input type="number" data-action="change->timer#updateStudyTime" value="25"></label>
+    <label><span>小休憩 </span><input type="number" data-action="change->timer#updateShortBreakTime" value="5"></label>
+    <label><span>大休憩 </span><input type="number" data-action="change->timer#updateLongBreakTime" value="15"></label>
+    <label><span>ポモドーロセット数 </span><input type="number" data-action="change->timer#updateSetCountBeforeLongBreak" value="4"></label>
+  </div>
 </div>
