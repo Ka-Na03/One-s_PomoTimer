@@ -34,7 +34,7 @@ export default class extends Controller {
   }
 
   start() {
-    if (this.currentSessionType === "study") {
+    if (this.currentSessionType === "study" && this.remainingTime === this.studyTime) {
       this.currentSetCount += 1;
       this.updateTimerDisplay();
     }
