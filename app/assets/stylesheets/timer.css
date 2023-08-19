@@ -1,6 +1,11 @@
 /* 共通のスタイル */
+* {
+  box-sizing: border-box;
+}
+
 body {
-  font-family: Arial, sans-serif;
+  font-family: Roboto, Arial, sans-serif;
+  background-color: #F5F5F5;
   max-width: 1920px;
   width: 100%;
 }
@@ -10,7 +15,11 @@ h1 {
   font-size: 40px;
 }
 
-/* コンポーネントのスタイル */
+:root {
+  --primary-color: #FFA726;
+  --secondary-color: #2196F3;
+}
+
 /* タイマーの表示部分 */
 .timer-display {
   display: flex;
@@ -22,13 +31,13 @@ h1 {
   width: auto;
   height: 230px;
 
-  font-size: 96px;
+  font-size: 120px;
   font-weight: bold;
   font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
   letter-spacing: 15px;
 
-  color: #4A3434;
-  background-color: rgba(255, 0, 0, 0.5);
+  color:  #4A3434;
+  background-color: var(--primary-color);
 }
 
 /* ボタン */
@@ -46,10 +55,9 @@ h1 {
   font-size: 18px;
   letter-spacing: 5px;
   border-radius:7px;
-}
+  border: none;
 
-.button-group button {
-  border: solid black 0.3px;
+  background-color: #FF9800;
 }
 
 .start-button {
@@ -61,62 +69,93 @@ h1 {
   margin-right: auto;
   width:210px;
   height:50px;
-  background-color: rgba(255,0,0,0.8);
+  background-color: #eb4f34;
   font-size: 20px;
   letter-spacing: 12px;
   border-radius:10px;
   border:none;
 }
 
-.start-button[disabled] {
-  background-color:rgba(255,0,0,0.2);
-}
-
 /* ボタンをクリックするとへこむ効果 */
 .button-group button:focus,
 .start-button:focus {
-    outline:none; /* アウトラインなし */
-    transform:scale(0.95); /* 少し縮小する */
+  outline:none;
+  transform:scale(0.95); /* 少し縮小する */
+}
+
+.button-group button:hover,
+.button-group button:focus {
+  background-color: #FFA726;
 }
 
 .start-button[disabled] {
-    background-color:rgba(255,0,0,0.2);
-    transform:none;
+  background-color:rgba(33,150,243,0.2);
+  transform:none;
 }
 
 /* 入力欄とラベル */
 .input-group {
-    display:flex; /* フレックスボックスにする */
-    justify-content:space-around; /* 横方向の均等配置 */
+  display:flex;
+  justify-content:space-around;
 
-    margin-top:20px; 
+  margin-top:20px;
 }
 
 .input-group label {
-    display:flex; /* フレックスボックスにする */
-    flex-direction:column; /* 縦方向にする */
-    align-items:center; /* 中央寄せにする */
+  display:flex;
+  flex-direction:column;
+  align-items:center;
 }
 
 .input-group input {
-    width:140px; /* 入力欄の幅 */
-    height:35px; /* 入力欄の高さ */
+  width:140px;
+  height:35px;
 
-    text-align:center; /* 中央寄せ */
+  text-align:center;
 
-    font-size:16px; /* フォントサイズ */
+  font-size:16px;
 
-    background:#D7D7D7; /* 背景色 */
+  background:#D7D7D7;
 }
 
 .input-group input::placeholder {
-    font-style:normal;
-    font-weight:400;
-    line-height:normal;
-    letter-spacing:3.6px;
+  font-style:normal;
+  font-weight:400;
+  line-height:normal;
+  letter-spacing:3.6px;
 }
 
 .input-group label span {
-    font-size:13px; /* フォントサイズ */
-    letter-spacing:2.7px; /* 文字間隔 */
+  font-size:14px;
+  letter-spacing:2.8px;
+}
+
+/* モバイル端末向けのメディアクエリ */
+@media (max-width: 767px) {
+  h1 {
+    font-size: 32px;
+  }
+
+  .timer-display {
+    height: 150px;
+    font-size: 80px;
+    letter-spacing: 10px;
+  }
+
+  .start-button {
+    margin-top: 20px;
+    width:140px;
+    height:35px;
+    font-size:18px;
+    letter-spacing: 5px;
+    border-radius:7px;
+  }
+
+  .input-group {
+    flex-direction: column;
+  }
+
+  .input-group label {
+    margin-bottom: 10px;
+  }
 }
