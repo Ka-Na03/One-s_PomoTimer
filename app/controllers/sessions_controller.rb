@@ -5,7 +5,7 @@ class SessionsController < ApplicationController
       session[:user_id] = @user.id
       redirect_to root_path, notice: "ログインしました"
     else
-      flash.now[:alert] = "ログインできませんでした"
+      flash.now[:alert] = "ログインできませんでした。<br>入力した内容に誤りがあります。"
       render :new
     end
   end
