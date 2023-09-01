@@ -1,15 +1,60 @@
 /*
- * This is a manifest file that'll be compiled into application.css, which will include all the files
- * listed below.
- *
- * Any CSS (and SCSS, if configured) file within this directory, lib/assets/stylesheets, or any plugin's
- * vendor/assets/stylesheets directory can be referenced here using a relative path.
- *
- * You're free to add application-wide styles to this file and they'll appear at the bottom of the
- * compiled file so the styles you add here take precedence over styles defined in any other CSS
- * files in this directory. Styles in this file should be added after the last require_* statement.
- * It is generally better to create a new file per style scope.
- *
  *= require_tree .
  *= require_self
  */
+/* ヘッダー部分のスタイル */
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 60px;
+  padding: 0 20px;
+  background-color: #ffffff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* ロゴ部分のスタイル */
+.logo {
+  font-size: 24px;
+  font-weight: bold;
+  color: #333333;
+}
+
+.logo:hover {
+  color: #FFA726;
+}
+
+/* ナビゲーション部分のスタイル */
+.nav {
+  display: flex;
+  gap: 20px;
+}
+
+/* ナビゲーションのリンクのスタイル */
+.nav-link {
+  font-size: 16px;
+  color: #333333;
+  text-decoration: none;
+}
+
+/* ナビゲーションのリンクにカーソルを合わせたときのスタイル */
+.nav-link:hover {
+  color: #0099ff;
+}
+
+.logout-form {
+  display: inline-block;
+}
+
+.logout-button {
+  font-size: 16px;
+  color: #333333;
+  text-decoration: none;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+.logout-button:hover {
+  color:#0099ff;
+}
