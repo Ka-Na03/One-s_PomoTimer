@@ -1,0 +1,14 @@
+<h1>マイページ</h1>
+
+<% if flash[:notice] %>
+  <div class="notice"><%= flash[:notice] %></div>
+<% end %>
+
+<div class="user-info">
+  <div class="user-name"><%= @user.user_name %></div>
+  <div class="user-email"><%= @user.email %></div>
+</div>
+
+<%= form_with url: logout_path, method: :delete, class: "logout-form" do |f| %>
+  <%= f.submit "ログアウト", class: "logout-button" %>
+<% end %>
